@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "hexdustry",
+  "version": "${version}",
+  "name": "Hexdustry",
+  "description": "Making hexcasting more automation-friendly since 2026",
+  "authors": [
+    "whynotdogie"
+  ],
+  "contact": {
+    "homepage": "https://whynotdogie.github.io/hexdustry",
+    "sources": "https://github.com/whynotdogie/hexdustry"
+  },
+  "license": "MIT",
+  "icon": "assets/hexdustry/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [{
+      "adapter": "kotlin",
+      "value": "dev.dogie.hexdustry.fabric.FabricHexdustry"
+    }],
+    "client": [{
+      "adapter": "kotlin",
+      "value": "dev.dogie.hexdustry.fabric.FabricHexdustryClient"
+    }],
+    "server": [{
+      "adapter": "kotlin",
+      "value": "dev.dogie.hexdustry.fabric.FabricHexdustryServer"
+    }],
+    "fabric-datagen": [{
+      "adapter": "kotlin",
+      "value": "dev.dogie.hexdustry.fabric.datagen.FabricHexdustryDatagen"
+    }],
+    "modmenu": [{
+      "adapter": "kotlin",
+      "value": "dev.dogie.hexdustry.fabric.FabricHexdustryModMenu"
+    }]
+  },
+  "mixins": [
+    "hexdustry-common.mixins.json",
+    "hexdustry-fabric.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${versions.minecraft}",
+    "fabricloader": ">=${versions.fabric_loader}",
+    "fabric-api": ">=${versions.fabric_api}",
+    "fabric-language-kotlin": ">=${versions.kotlin_fabric}",
+    "architectury": ">=${versions.architectury}",
+    "hexcasting": ">=${versions.hexcasting}",
+    "cloth-config": ">=${versions.clothConfig}"
+  },
+  "suggests": {
+    "modmenu": ">=${versions.modMenu}"
+  }
+}

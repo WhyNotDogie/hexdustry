@@ -1,0 +1,46 @@
+modLoader = "kotlinforforge"
+loaderVersion = "[${versions.kotlin_forge},)"
+license = "MIT"
+
+[[mods]]
+modId = "hexdustry"
+version = "${version}"
+displayName = "Hexdustry"
+logoFile = "assets/hexdustry/icon.png"
+authors = "whynotdogie"
+description = "Making hexcasting more automation-friendly since 2026"
+
+[[dependencies.hexdustry]]
+modId = "forge"
+mandatory = true
+versionRange = "[${versions.forge_dependency},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hexdustry]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${versions.minecraft},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hexdustry]]
+modId = "architectury"
+mandatory = true
+versionRange = "[${versions.architectury},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hexdustry]]
+modId = "cloth_config"
+mandatory = true
+versionRange = "[${versions.cloth_config},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.hexdustry]]
+modId = "hexcasting"
+mandatory = true
+versionRange = "[${versions.hexcasting},)"
+ordering = "NONE"
+side = "BOTH"
